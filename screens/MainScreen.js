@@ -17,7 +17,7 @@ import ImagePicker from 'react-native-image-picker';
 // import Family from "./family";
 import Name from "./Name";
 // import FamilyDetailValue from './familydetailvalue';
-// import FamilyDetail from './familydetail';
+import FamilyDetail from './familydetail';
 // import images from './images/image';
 
 import cameraicon from './cameraicon.png';
@@ -259,7 +259,7 @@ export default class HomeScreen extends Component {
                                 {" " + birdsrecognizepercent[0] + "%"}
                                 {/* {Name["alexandrine parakeet"]} */}
                             </Text>
-                            <Text style={{fontFamily:"preeti"}}>{Name["alexandrine parakeet"]["nepali"]}</Text>
+                            <Text style={{ fontFamily: "preeti" }}>{Name["alexandrine parakeet"]["nepali"]}</Text>
                             <Text style={styles.textcgs}>
                                 {/* Family:{Family[birdsrecognize[0]]} */}
                                 {/* {Name["alexandrine parakeet"]["name"]} */}
@@ -293,13 +293,14 @@ export default class HomeScreen extends Component {
                         </View>
                         {/* <Text>Similar Family:{Family[birdsrecognize[0]]}</Text> */}
                         <ScrollView horizontal style={{ flexDirection: 'row' }}>
-
-                            {/* {FamilyDetail[Name[birdsrecognize[0]]["family"]].map((item, key) =>
+                                {/* <Text>{FamilyDetail[Name[birdsrecognize[0]]["family"]]+" "}</Text> */}
+                            {FamilyDetail[Name[birdsrecognize[0]]["family"]].map((item, key) =>
                                 <View key={key} style={{ flexDirection: 'row', padding: 10 }}>
-                                    <Image  source={images[item]} style={{ height: 75, width: 75 }} />
+                                    {/* <Image  source={images[item]} style={{ height: 75, width: 75 }} /> */}
+                                   <Text>{item}</Text>
                                 </View>
-                            )} */}
-                            {/* </Text> */}
+                            )}
+                            
                         </ScrollView>
                     </View>
 
