@@ -555,7 +555,7 @@ export default family={
         "common green magpie",
         "plain crowned jay",
         "black headed jay",
-        "southern nutcracker",
+        "southern nutcraker",
         "common raven",
         "house crow",
         "large billed crow"
@@ -1040,7 +1040,7 @@ export default family={
         "red headed bullfinch",
         "grey headed bullfinch",
         "blanford s rosefinch",
-        "spectacled finch",
+        "spactacled finch",
         "gold naped finch",
         "dark breasted rosefinch",
         "plain mountain finch",
