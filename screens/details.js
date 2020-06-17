@@ -11,7 +11,7 @@ import {
 // import BirdsDetails from './data';
 import HTML from 'react-native-render-html';
 // import Family from "./family";
-// import Name from "./Name";
+import Name from "./Database";
 
 
 
@@ -40,7 +40,7 @@ class Detailscreen extends Component {
         </Text>
         <ScrollView style={{ marginLeft: 15, marginRight: 15, textAlign: 'justified' }}>
           <HTML
-            // html={BirdsDetails[searchTerm]}
+            html={Name[searchTerm]["details"]}
           />
 
         </ScrollView>

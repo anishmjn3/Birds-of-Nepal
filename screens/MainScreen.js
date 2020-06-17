@@ -15,7 +15,8 @@ import Tflite from 'tflite-react-native';
 import ImagePicker from 'react-native-image-picker';
 
 // import Family from "./family";
-import Name from "./Name";
+// import Name from "./Name";
+import Name from './Database'
 // import FamilyDetailValue from './familydetailvalue';
 import FamilyDetail from './familydetail';
 // import images from './images/image';
@@ -254,14 +255,14 @@ export default class HomeScreen extends Component {
                         <View>
                             <Text style={styles.textcgs}>
                                 {/* Name: {FamilyDetailValue[birdsrecognize[0]]} */}
-                                {birdsrecognize[0]}
-                                {/* {Name[birdsrecognize[0]][0]} */}
+                                {/* {birdsrecognize[0]} */}
+                                {Name[birdsrecognize[0]]["name"]}
                                 {" " + birdsrecognizepercent[0] + "%"}
                                 {/* {Name["alexandrine parakeet"]} */}
                             </Text>
-                            <Text style={{ fontFamily: "preeti" }}>{Name["alexandrine parakeet"]["nepali"]}</Text>
+                            {/* <Text style={{ fontFamily: "preeti" }}>{Name["alexandrine parakeet"]["nepali"]}</Text> */}
                             <Text style={styles.textcgs}>
-                                {/* Family:{Family[birdsrecognize[0]]} */}
+                                Family:{Name[birdsrecognize[0]]["family"]}
                                 {/* {Name["alexandrine parakeet"]["name"]} */}
                             </Text>
                         </View>
@@ -297,7 +298,7 @@ export default class HomeScreen extends Component {
                             {FamilyDetail[Name[birdsrecognize[0]]["family"]].map((item, key) =>
                                 <View key={key} style={{ flexDirection: 'row', padding: 10 }}>
                                     {/* <Image  source={images[item]} style={{ height: 75, width: 75 }} /> */}
-                                   <Text>{item}</Text>
+                                   <Text>{item+" "}</Text>
                                 </View>
                             )}
                             
