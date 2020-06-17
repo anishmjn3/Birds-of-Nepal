@@ -40,7 +40,7 @@ export default family={
         "common shelduck",
         "african comb duck",
         "cotton pygmy goose",
-        "red crested pochard",
+        "red creted pochard",
         "common pochard",
         "baer s pochard",
         "ferruginous duck",
@@ -136,7 +136,7 @@ export default family={
         "plaintive cuckoo"
     ],
     "Rallidae":[
-        "slaty breasted rail",
+        "slatey breasted rail",
         "estern water rail",
         "western waterr rail",
         "ruddy breasted crake",
@@ -468,7 +468,7 @@ export default family={
         "slaty headed parakeet",
         "blossom headed parakeet",
         "plum headed parakeet",
-        "red breasted parakeet",
+        "red breated parakeet",
         "alexandrine parakeet",
         "rose ringed parakeet"
     ],
@@ -859,7 +859,7 @@ export default family={
         "asian brown flycatcher",
         "brown breasted flycatcher",
         "ferruginoous flycatcher",
-        "rufous bellied niltava",
+        "rufous belied niltava",
         "small niltava",
         "large niltava",
         "verditer flycatcher",
