@@ -122,6 +122,7 @@ export default name = [
     "blue winged minla",
     "bluethroat",
     "blunt winged warbler",
+    "blue tailed bee eater",
     "blyth s kingfisher",
     "blyth s leaf warbler",
     "blyth s pipit",
@@ -757,6 +758,7 @@ export default name = [
     "sulphur bellied warbler",
     "sultan tit",
     "swamp francolin",
+    "swamp grass babbler",
     "swinhoe s minivet",
     "sykes s nightjar",
     "tawny eagle",
@@ -882,8 +884,5 @@ export default name = [
     "yellow vented warbler",
     "yellow wattled lapwing",
     "yellowhammer",
-    "zitting cisticola",
-    "blue tailed bee eater",
-    "swamp grass babbler",
-
+    "zitting cisticola"
 ]

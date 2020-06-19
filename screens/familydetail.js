@@ -18,10 +18,10 @@ export default family={
         "red junglefowl",
         "himalayan monal",
         "satyr tragopan",
-        "blood pheasant",
+        "blood phesant",
         "koklass phesant",
-        "cheer phesant",
-        "kalij pheasant"
+        "cheer plesant",
+        "kalij pleasant"
     ],
     "Anatidae":[
         "fulvous whistling duck",
@@ -30,9 +30,9 @@ export default family={
         "tundra swan",
         "bean goose",
         "greater white fronted goose",
-        "greylay goose",
+        "greylag goose",
         "long tailed duck",
-        "common goldeye",
+        "common goldeneye",
         "smew",
         "goosander",
         "red breasted merganser",
@@ -49,8 +49,9 @@ export default family={
         "pink headed duck",
         "garganey",
         "noerthern shoveler",
+        "bar headed goose",
         "falcated duck",
-        "mardarin duck",
+        "mandarin duck",
         "gadwall",
         "eurasian wigeon",
         "indian spot billed duck",
@@ -65,7 +66,7 @@ export default family={
         "great created grebe",
         "black necked grebe"
     ],
-    "Phonicopteridae":[
+    "Phoenicopteridae":[
         "greater flamingo"
     ],
     "Columbidae":[
@@ -74,7 +75,7 @@ export default family={
         "snow pigeon",
         "common woodpigeon",
         "speckled woodpigeon",
-        "ashy woodpigeon",
+        "ashy wood pigeon",
         "oriental turtle dove",
         "eurasian collared dove",
         "red turtle dove",
@@ -93,9 +94,9 @@ export default family={
     "Pteroclidae":[
         "tibetan sandgrouse"
     ],
-    "Camprimulgidae":[
+    "Caprimulgidae":[
         "grey nightjar",
-        "skyke s nightjar",
+        "sykes s nightjar",
         "large tailed nightjar",
         "indian nightjar",
         "savanna nightjar"
@@ -136,25 +137,26 @@ export default family={
         "plaintive cuckoo"
     ],
     "Rallidae":[
-        "slatey breasted rail",
+        "slaty breasted rail",
         "estern water rail",
-        "western waterr rail",
+        "western water rail",
         "ruddy breasted crake",
         "brown crake",
-        "black tailed crake",
+        "black trailed crake",
         "spotted crake",
-        "slaty legged crake",
+        "slatey legged crake",
         "white breasted waterhen",
-        "watecock",
+        "watercock",
         "purple swamphen",
         "common moorhen",
-        "common coot"
+        "cmmon coot",
+        "baillon s crake"
     ],
     "Gruidae":[
         "sarus crane",
         "demoiselle crane",
         "common crane",
-        "black-necked crane"
+        "black necked crane"
     ],
     "Gaviidae":[
         "red throated loon"
@@ -165,13 +167,13 @@ export default family={
     ],
     "Ciconiidae":[
         "greater adjutant",
-        "lesseer adjutant",
-        "painted strok",
+        "lesser adjutant",
+        "painted stork",
         "asian openbill",
         "black strok",
         "asian woollyneck",
-        "white strok",
-        "black necked strok"
+        "white stork",
+        "black necked stork"
     ],
     "Threskiornithidae":[
         "eurasian spoonbill",
@@ -208,7 +210,7 @@ export default family={
     "Anhingidae":[
         "oriental darter"
     ],
-    "Burhingidae":[
+    "Burhinidae":[
         "indian thick knee",
         "great thick knee"
     ],
@@ -268,7 +270,10 @@ export default family={
         "common greenshank",
         "common redshank",
         "wood sandpiper",
-        "marsh sandpiper"
+        "marsh sandpiper",
+        "common sandpiper",
+        "green sandpiper",
+        "spotted redshank"
     ],
     "Turnicidae":[
         "common buttonquail",
@@ -277,17 +282,17 @@ export default family={
     ],
     "Glareolidae":[
         "indian courser",
-        "oriental pratincole",
+        "orienteal pratincole",
         "little pratincole"
     ],
     "Laridae":[
         "indian skimmer",
         "broen headed gull",
         "black headed gull",
-        "palla s gull",
+        "pallas s gull",
         "mew gull",
         "slender billed gull",
-        "lesser black backed gull",
+        "lesser black blacked gull",
         "little tern",
         "caspian tern",
         "whiskered tern",
@@ -309,7 +314,7 @@ export default family={
         "jungle owlet",
         "spotted owlet",
         "little owlet",
-        "collared scops owl",
+        "collard scops owl",
         "indian scops owl",
         "mountain scops owl",
         "oriental scops owl",
@@ -333,7 +338,7 @@ export default family={
         "oriental honey buzzard",
         "jerdon s baza",
         "black baza",
-        "crested serpent eagle",
+        "creasted serpent eagle",
         "short toed snake eagle",
         "bearded vulture",
         "red headed vulture",
@@ -341,9 +346,9 @@ export default family={
         "white rumped vulture",
         "slender billed vulture",
         "indian vulture",
-        "griffon vuture",
+        "griffon vulture",
         "cinereous vulture",
-        "mountain hawk eagle",
+        "mountian hawk eagle",
         "changeable hawk eagle",
         "rufous bellied eagle",
         "black eagle",
@@ -366,7 +371,7 @@ export default family={
         "besra",
         "eurasian sparrowhawk",
         "northern goshawk",
-        "palla s fish eagle",
+        "pallas s fish eagle",
         "white tailed sea eagle",
         "lesser fish eagle",
         "grey headed fish eagle",
@@ -375,13 +380,14 @@ export default family={
         "white eyed buzzard",
         "himalayan buzzard",
         "long legged buzzard",
-        "upland buzzard"
+        "upland buzzard",
+        "egyptian vulture"
     ],
     "Trogonidae":[
         "red headed trogon"
     ],
     "Bucerotidae":[
-        "great horbill",
+        "great hornbill",
         "indian grey hornbill",
         "oriental pied hornbill",
         "rufous necked hornbill"
@@ -390,7 +396,7 @@ export default family={
         "common hoopoe"
     ],
     "Meropidae":[
-        "bule bearded bee eater",
+        "blue bearded bee eater",
         "asian green bee eater",
         "chestnut headed bee eater",
         "blue tailed bee eater"
@@ -425,7 +431,7 @@ export default family={
     ],
     "Picidae":[
         "eurasian wryneck",
-        "white browed piculet",
+        "white browned piculet",
         "speckled piculet",
         "bay woodpecker",
         "greater flameback",
@@ -439,7 +445,7 @@ export default family={
         "streak throated woodpecker",
         "black naped woodpecker",
         "scaly bellied woodpecker",
-        "great slaty woodpecker",
+        "great staty woodpecker",
         "grey cpped woodpecker",
         "indian pygmy woodpecker",
         "yellow crowned woodpecker",
@@ -466,7 +472,7 @@ export default family={
     "Psittacidae":[
         "vernal hanging parrot",
         "slaty headed parakeet",
-        "blossom headed parakeet",
+        "blosson headed parakeet",
         "plum headed parakeet",
         "red breated parakeet",
         "alexandrine parakeet",
@@ -478,7 +484,7 @@ export default family={
         "western hooded pitta"
     ],
     "Eurylaimidae":[
-        "long ailed broadbill",
+        "long tailed broadbill",
         "grey browed broadbill"
     ],
     "Oriolidae":[
@@ -493,7 +499,7 @@ export default family={
         "white browed shrike babbler",
         "green shrike babbler",
         "black eared shrike babbler",
-        "white bellied erpornis"
+        "white bellied erponis"
     ],
     "Campephagidae":[
         "small minivet",
@@ -527,7 +533,7 @@ export default family={
         "black drongo",
         "ashy drongo",
         "white bellied drongo",
-        "crow billed drongo",
+        "crow billied drongo",
         "bronze drongo",
         "lesser racquet tailed drongo",
         "hair crested drongo",
@@ -546,7 +552,7 @@ export default family={
         "great grey shrike"
     ],
     "Corvidae":[
-        "rofous treepie",
+        "rufous treepie",
         "grey treepie",
         "red billed chough",
         "yellow billed chough",
@@ -576,7 +582,7 @@ export default family={
         "green backed tit",
         "great tit",
         "black lored tit",
-        "yelow cheeked tit"
+        "yellow cheeked tit"
     ],
     "Alaudidae":[
         "rufous tailed lark",
@@ -597,7 +603,7 @@ export default family={
         "golden headed cisticola",
         "striated prinia",
         "black throated prinia",
-        "grey crowedd prinia",
+        "grey crowned prinia",
         "grey breasted prinia",
         "graceful prinia",
         "jungle prinia",
@@ -618,7 +624,7 @@ export default family={
         "oriental reed warbler"
     ],
     "Pnoepygidae":[
-        "nepak cupwing",
+        "nepal cupwing",
         "pygmy cupwing",
         "scaly breasted cupwing"
     ],
@@ -735,7 +741,7 @@ export default family={
         "slender billed scimitar babbler",
         "white browed scimitar babbler",
         "streak breasted scimitar babbler",
-        "rusty cheeked schimitar babbler",
+        "rusty cheeked scimitar babbler",
         "grey throated babbler",
         "tawny bellied babbler",
         "chestnut capped babbler",
@@ -791,9 +797,9 @@ export default family={
     ],
     "Certhiidae":[
         "rusty flanked treecreeper",
-        "sikkim treekeeper",
-        "bar tailed treekeeper",
-        "hodgso s treekeeper"
+        "sikkim treecreeper",
+        "bar tailed treecreper",
+        "hodgso s treecreeper"
     ],
     "Sittidae":[
         "kashmir nuthatch",
@@ -807,7 +813,7 @@ export default family={
     "Troglodytidae":[
         "northern wren"
     ],
-    "cinclidae":[
+    "Cinclidae":[
         "white throated dipper",
         "brown dipper"
     ],
@@ -836,7 +842,7 @@ export default family={
         "scaly thrush",
         "purple cochoa",
         "green cochoa",
-        "pied thtush",
+        "pied thrush",
         "orange headed thrush",
         "mistle thrush",
         "grey winged blackbird",
@@ -858,7 +864,7 @@ export default family={
         "dark sided flycatcher",
         "asian brown flycatcher",
         "brown breasted flycatcher",
-        "ferruginoous flycatcher",
+        "ferruginous flycatcher",
         "rufous belied niltava",
         "small niltava",
         "large niltava",
@@ -900,7 +906,7 @@ export default family={
         "red throated flycatcher",
         "red breasted flycatcher",
         "kashmir flycatcher",
-        "evermann s flycatcher",
+        "eversmann s redstart",
         "blue fronted redstart",
         "blue capped redstart",
         "white throated redstart",
@@ -908,7 +914,7 @@ export default family={
         "plumbeous water redstart",
         "black redstart",
         "white winged redstart",
-        "hodgson's redstart",
+        "hodgson s redstart",
         "daurian redstart",
         "blue capped rock thrush",
         "chestnu bellied rock thrush",
@@ -940,7 +946,7 @@ export default family={
     "Irenidae":[
         "asian fairy bluebird"
     ],
-    "Choropseidae":[
+    "Chloropseidae":[
         "golden fronted leafbird",
         "orange bellied leafbird"
     ],
@@ -951,7 +957,7 @@ export default family={
         "pale billed flowerpecker",
         "plain flowerpecker",
         "scarlet backed flowerpecker",
-        "fire brested flowerpecker"
+        "fire breasted flowerpecker"
     ],
     "Nectariniidae":[
         "little spiderhunter",
@@ -985,7 +991,7 @@ export default family={
         "white rumped munia",
         "scaly breasted munia",
         "chestnut munia",
-        "tricoloured munia"
+        "tricolored munia"
     ],
     "Passeridae":[
         "house sparrow",
@@ -995,8 +1001,8 @@ export default family={
         "spanish sparrow",
         "black winged snowfinch",
         "white rumped snowfinch",
-        "rufouse necked snowfinch",
-        "plain backed snowfinch"
+        "plain backed snowfinch",
+        "rufous necked snowfinch"
     ],
     "Motacillidae":[
         "tree pipit",
@@ -1022,7 +1028,7 @@ export default family={
         "common chaffinch",
         "brambling",
         "black and yellow grosbeak",
-        "collared grosbeak",
+        "collared groasbeak",
         "spot winged grosbeak",
         "white winged grosbeak",
         "common rosefinch",
@@ -1034,7 +1040,7 @@ export default family={
         "streaked rosefinch",
         "great rosefinch",
         "red fronted rosefinch",
-        "crison browed finch",
+        "crimson browed finch",
         "himalayan white browed rosefinch",
         "brown bullfinch",
         "red headed bullfinch",
@@ -1049,13 +1055,15 @@ export default family={
         "twite",
         "red crossbill",
         "eastern goldfinch",
-        "red frinted serin",
+        "red fronted serin",
         "tibetan siskin",
         "common linnet",
-        "eurasian siskin"
+        "eurasian siskin",
+        "mongolian finch",
+        "spot winged rosefinch"
     ],
     "Emberizidae":[
-        "creasted bunting",
+        "crested bunting",
         "black headed bunting",
         "red headed bunting",
         "chestnut eared bunting",

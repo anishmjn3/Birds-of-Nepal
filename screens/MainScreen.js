@@ -14,40 +14,36 @@ import {
 import Tflite from 'tflite-react-native';
 import ImagePicker from 'react-native-image-picker';
 
-// import Family from "./family";
-// import Name from "./Name";
 import Name from './Database'
-// import FamilyDetailValue from './familydetailvalue';
 import FamilyDetail from './familydetail';
-// import images from './images/image';
 
 import cameraicon from './cameraicon.png';
 import galleryicon from './galleryicon.png';
 
 let tflite = new Tflite();
 
-const height = Dimensions.get('window').height * 0.5;
-const width = Dimensions.get('window').width * 0.1;
+const height = Dimensions.get('window').height;
+const width = Dimensions.get('window').width;
 const blue = "#ffffff";
 // const mobile = "Pick an image";
 var searchTerm = '';
 
 var birdsrecognize = ['alpine swift'];
 var birdsrecognizepercent = ['0']
-var birdfamily = [];
 console.disableYellowBox = true;
 
 
 
 export default class HomeScreen extends Component {
     static navigationOptions = () => ({
-        title: 'Home',
+        title: 'Birds of Nepal',
         headerStyle: {
             backgroundColor: '#00008b',
         },
         headerTitleStyle: {
             color: 'white'
-        }
+        },
+
     });
 
     constructor(props) {
@@ -70,7 +66,7 @@ export default class HomeScreen extends Component {
 
     onSelectModel(model) {
         this.setState({ model });
-        var modelFile = 'models/retrained_graphbirds886classes.lite';
+        var modelFile = 'models/retrained_graph886at20k.lite';
         var labelsFile = 'models/retrained_labels886.txt';
         tflite.loadModel({
             model: modelFile,
@@ -181,17 +177,7 @@ export default class HomeScreen extends Component {
         return recognitions.map((res, id) => {
             birdsrecognize[i] = res["label"];
             birdsrecognizepercent[i] = (res["confidence"] * 100).toFixed(0)
-            // searchTerm = this.titleCase(res["label"]);
             i++;
-            // return (
-            //     <View>
-            //         <Text key={id} style={{ color: 'black' }}>
-            //             {/* {res["label"] + "-" + (res["confidence"] * 100).toFixed(0) + "%"} */}
-            //             {/* {Name[res["label"]]} */}
-            //             {/* {Name[birdsrecognize[i-1]]} */}
-            //         </Text>
-            //     </View>
-            // )
         });
 
 
@@ -202,22 +188,37 @@ export default class HomeScreen extends Component {
     render() {
         var { model, source, imageHeight, imageWidth } = this.state;
 
-        var renderButton = () => {
+        var resultScreen = () => {
             return (
                 <View >
-                    <View >
-                        <TouchableOpacity onPress={this.onSelectCamera.bind(this)}>
+                    <View style={[styles.galleryinbutton]}>
+                        <TouchableOpacity
+                            onPress={this.onSelectCamera.bind(this)}
+                            style={[styles.gallertbutton, styles.styleborder]}
+                        >
                             <Image source={cameraicon} style={styles.icon} />
-                            <Text style={styles.textcgs}>Camera</Text>
+                            <Text style={styles.textcgs}>Scan a Bird</Text>
                         </TouchableOpacity>
                     </View>
-                    <View style={{ padding: 15, }}>
+                    <View style={styles.galleryinbutton}>
                         <TouchableOpacity
                             onPress={this.onSelectGallery.bind(this)}
+                            style={[styles.gallertbutton, styles.styleborder]}
                         >
                             <Image source={galleryicon} style={styles.icon} />
 
-                            <Text style={styles.textcgs}>Gallery</Text>
+                            <Text style={styles.textcgs}> Pick from Gallery</Text>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style={styles.galleryinbutton}>
+                        <TouchableOpacity
+                            onPress={() => this.props.navigation.navigate('Explore')}
+                            style={[styles.gallertbutton, styles.centerAlign, styles.styleborder]}
+                        >
+                            {/* <Image source={galleryicon} style={styles.icon} /> */}
+
+                            <Text style={styles.textcgs}>Explore Birds</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -227,88 +228,87 @@ export default class HomeScreen extends Component {
 
         return (
             <View style={styles.container}>
-                {/* <Text>sdfsf</Text> */}
                 {source ?
                     <View style={styles.centerAlign}>
 
-                        <View style={{ height: Dimensions.get('window').height * 0.01 }}>
-                            {/* <Text>as</Text> */}
+                        <View style={{ height: height * 0.04, width: 300 }}>
+
                         </View>
-                        <View style={
-                            [styles.imageContainer,
-                            styles.centerAlign,
-                            {
-                                height: imageHeight,
-                                width: imageWidth,
-                                borderWidth: source ? 0 : 2
-                            }]}>
+                        <View style={[styles.centerAlign, styles.imagecontainer]}>
 
                             <Image source={source} style={{
-                                height: imageHeight, width: imageWidth
-                            }} resizeMode="contain" />
-                        </View>
-
-                        <View style={styles.boxes}>
-                            {this.renderBoxes()}
-                        </View>
-
-                        <View>
-                            <Text style={styles.textcgs}>
-                                {/* Name: {FamilyDetailValue[birdsrecognize[0]]} */}
-                                {/* {birdsrecognize[0]} */}
-                                {Name[birdsrecognize[0]]["name"]}
-                                {" " + birdsrecognizepercent[0] + "%"}
-                                {/* {Name["alexandrine parakeet"]} */}
-                            </Text>
-                            {/* <Text style={{ fontFamily: "preeti" }}>{Name["alexandrine parakeet"]["nepali"]}</Text> */}
-                            <Text style={styles.textcgs}>
-                                Family:{Name[birdsrecognize[0]]["family"]}
-                                {/* {Name["alexandrine parakeet"]["name"]} */}
-                            </Text>
-                        </View>
-
-                        <View style={styles.detailbutton}>
-
-
-
-                            <Button
-                                style={styles.button}
-                                title="More Info"
-                                onPress={() =>
-                                    /* 1. Navigate to the Details route with params */
-                                    this.props.navigation.navigate('Details', {
-                                        // id: 'ResultsView',
-                                        // name: 'Results',
-                                        searchTerm: birdsrecognize[0],
-                                    })
-                                }
+                                height: height * 0.39,
+                                width: imageWidth
+                            }}
+                                resizeMode="contain"
                             />
-
-                            <View style={{ padding: 15 }}>
-                                <Button
-                                    style={styles.button}
-                                    title="Back"
-                                    onPress={() => { this.setState({ source: null }) }}
-                                />
-                            </View>
                         </View>
-                        {/* <Text>Similar Family:{Family[birdsrecognize[0]]}</Text> */}
-                        <ScrollView horizontal style={{ flexDirection: 'row' }}>
-                                {/* <Text>{FamilyDetail[Name[birdsrecognize[0]]["family"]]+" "}</Text> */}
+                        {this.renderBoxes()}
+                        <View style={[styles.resultstyle, styles.centerAlign]}>
+                            <Text style={styles.textresult}>
+                                {Name[birdsrecognize[0]]["name"]}
+                            </Text>
+                            <Text style={styles.textresult}>
+                                {birdsrecognizepercent[0] + "%"}
+                            </Text>
+                        </View>
+
+                        <View style={[styles.buttonstyles, styles.centerAlign]}>
+                            <View style={[styles.button, { backgroundColor: 'grey', borderRadius: 7, margin: height * 0.005 }]}>
+                                <TouchableOpacity
+                                    style={[styles.button, styles.styleborder2, styles.centerAlign]}
+                                    onPress={() =>
+                                        this.props.navigation.navigate('Details', {
+                                            searchTerm: birdsrecognize[0],
+                                        })
+                                    }
+                                >
+                                    <Text style={[styles.textresult, { color: '#fff' }]}>Details</Text>
+                                </TouchableOpacity>
+                            </View>
+                            <View style={[styles.button, { backgroundColor: 'grey', borderRadius: 7, margin: height * 0.005 }]}>
+                                <TouchableOpacity
+                                    style={[styles.button, styles.styleborder2, styles.centerAlign]}
+                                    onPress={() => { this.setState({ source: null }) }}>
+                                    <Text style={[styles.textresult, { color: '#fff' }]}>Back</Text>
+                                </TouchableOpacity>
+                            </View>
+
+
+                        </View>
+                        <View style={{ marginTop: height * 0.004, width: width * 0.95, flexDirection: 'row' }}>
+                            <Text style={{ textAlign: 'left' }}>
+                                Other Birds of family:
+                            </Text>
+                            <Text style={{ fontWeight: 'bold' }}>
+                                {" " + Name[birdsrecognize[0]]["family"]}
+                            </Text>
+                        </View>
+                        <ScrollView horizontal style={{ flexDirection: 'row', width: width * 0.96 }}>
                             {FamilyDetail[Name[birdsrecognize[0]]["family"]].map((item, key) =>
-                                <View key={key} style={{ flexDirection: 'row', padding: 10 }}>
-                                    {/* <Image  source={images[item]} style={{ height: 75, width: 75 }} /> */}
-                                   <Text>{item+" "}</Text>
-                                </View>
+                                <TouchableOpacity
+                                    onPress={() =>
+                                        this.props.navigation.navigate('Details', {
+                                            searchTerm: item,
+                                        })
+                                    }
+                                >
+                                    <View key={key} style={styles.recommendstyle}>
+                                        {/* <Image  source={images[item]} style={{ height: 75, width: 75 }} /> */}
+
+                                        <Text>{Name[item]["name"]}</Text>
+
+                                    </View>
+                                </TouchableOpacity>
                             )}
-                            
+
                         </ScrollView>
                     </View>
 
                     :
 
                     <View>
-                        {renderButton()}
+                        {resultScreen()}
                     </View>
 
                 }
@@ -335,30 +335,87 @@ const styles = StyleSheet.create({
     },
     button: {
         backgroundColor: 'blue',
-        borderColor: 'white',
-        borderWidth: 1,
-        borderRadius: 7,
-        color: 'white',
-        fontSize: 12,
-        fontWeight: 'bold',
-        padding: 10,
-        width: 350,
-        textAlign: 'center',
-    },
+        // padding: 7,
+        width: width * 0.4,
+        height: height * 0.06,
 
+    },
+    imagecontainer: {
+        height: height * 0.43,
+        width: width * 0.9,
+        // backgroundColor:'red'
+    },
+    resultstyle: {
+        height: height * 0.135,
+        width: width * 0.8,
+    },
     icon: {
         height: 60,
         width: 60,
         alignSelf: 'center',
     },
-    detailbutton: {
-        padding: 25
+    buttonstyles: {
+        // padding: 25
+        // backgroundColor: 'red',
+        height: height * 0.13,
+        width: width * 0.5
     },
     textcgs: {
         marginTop: 10,
         // marginBottom: 15,
         fontSize: 20,
         fontWeight: 'bold',
-        textAlign: 'center'
+    },
+    textresult: {
+        fontSize: height * 0.023,
+        fontWeight: 'bold',
+
+        margin: 3
+    },
+    gallertbutton: {
+        flexDirection: "row",
+        height: height * 0.1,
+        width: width * 0.6,
+        alignItems: 'center',
+        backgroundColor: 'white',
+        padding: 10,
+        // bot
+    },
+    galleryinbutton: {
+        // padding:10,
+        height: height * 0.1,
+        margin: 10,
+        backgroundColor: 'grey',
+        borderRadius: 15
+    },
+    styleborder: {
+        borderBottomColor: 'grey',
+        borderRadius: 15,
+        borderBottomWidth: 3,
+        borderRightColor: 'grey',
+        borderRightWidth: 3,
+        borderLeftWidth: 3,
+        borderLeftColor: 'white'
+    },
+    styleborder2: {
+        borderBottomColor: 'grey',
+        borderRadius: 7,
+        borderBottomWidth: 2,
+        borderRightColor: 'grey',
+        borderRightWidth: 2,
+        borderLeftWidth: 2,
+        borderLeftColor: 'blue'
+    },
+    recommendstyle: {
+        flexDirection: 'row',
+        height: height * 0.13,
+        width: height * 0.13,
+        backgroundColor: 'white',
+        borderColor: 'grey',
+        borderWidth: 1,
+        marginTop: height * 0.004,
+        margin: height * 0.005,
+        opacity:0.65
+
     }
 });
