@@ -14,7 +14,7 @@ import {
 import HTML from 'react-native-render-html';
 // import Family from "./family";
 import Name from "./Database";
-import image from './images/image';
+import image from './images/src/image';
 
 
 class Detailscreen extends Component {

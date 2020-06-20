@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, ScrollView, Text, StyleSheet, TouchableOpacity, Dimensions } from 'react-native'
+import { View, ScrollView, Text, StyleSheet, TouchableOpacity, Dimensions,Image} from 'react-native'
 
 import BirdsAscen from '../data'
 import familyname from '../family';
 import family from '../familydetail';
 import Name from '../Database';
+import image from '../images/src/image'
 
 const alphabets = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'R', 'S', 'T', 'U', 'V', 'W', 'Y']
 const alphabetswvalue = {
@@ -63,7 +64,7 @@ export default class AllBirds extends React.Component {
                 <TouchableOpacity
                     style={[styles.familystyle, styles.familystyleborder,
                     // styles.centerAlign
-                    { justifyContent: 'center', paddingLeft: 15 }
+                    { justifyContent: 'center' }
                     ]}
                     onPress={() => this.props.navigation.navigate("Details",
                         { searchTerm: BirdsAscen[i] }
@@ -77,9 +78,16 @@ export default class AllBirds extends React.Component {
                         console.log('y:', layout.y);
                     }}
                 >
-                    <Text style={[styles.familytextstyle, styles.centerAlign]}>{i + 1 + ".  "}{Name[BirdsAscen[i]]["name"]}</Text>
+                    <View style={{flexDirection:'row'}}>
+                        <View style={{width:Dwidth*0.1,justifyContent:'center'}}>
+                    <Text style={[styles.familytextstyle, styles.centerAlign]}>{i + 1 + ".  "}</Text>
+                    </View>
+                        <View style={{width:Dwidth*0.5,justifyContent:'center'}}>
+                    <Text style={[styles.familytextstyle, styles.centerAlign]}>{Name[BirdsAscen[i]]["name"]}</Text>
                     {/* <Text>{i}{BirdsAscen[i]}</Text> */}
-
+                    </View>
+                    <Image source={image[BirdsAscen[i]]} style={{height:65,width:Dwidth*0.15}} resizeMode="contain"/>
+                    </View>
                 </TouchableOpacity>
 
             );
@@ -221,7 +229,7 @@ export default class AllBirds extends React.Component {
                         }
                     </ScrollView>
                     <View style={{ width: Dwidth * 0.07,height:Dheight*0.9 }}>
-                        {this.myloop2()}
+                        {/* {this.myloop2()} */}
                     </View>
                 </View>
                 {/* <View style={{ height: Dheight * 0.002 }} />
