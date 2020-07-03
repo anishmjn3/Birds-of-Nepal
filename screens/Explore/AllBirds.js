@@ -229,7 +229,7 @@ export default class AllBirds extends React.Component {
                         }
                     </ScrollView>
                     <View style={{ width: Dwidth * 0.07,height:Dheight*0.9 }}>
-                        {/* {this.myloop2()} */}
+                        {this.myloop2()}
                     </View>
                 </View>
                 {/* <View style={{ height: Dheight * 0.002 }} />

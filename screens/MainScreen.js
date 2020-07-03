@@ -16,6 +16,7 @@ import ImagePicker from 'react-native-image-picker';
 
 import Name from './Database'
 import FamilyDetail from './familydetail';
+import images from './images/src/image'
 
 import cameraicon from './cameraicon.png';
 import galleryicon from './galleryicon.png';
@@ -293,10 +294,16 @@ export default class HomeScreen extends Component {
                                         })
                                     }
                                 >
-                                    <View key={key} style={styles.recommendstyle}>
-                                        {/* <Image  source={images[item]} style={{ height: 75, width: 75 }} /> */}
+                                    <View key={key} style={[styles.recommendstyle]}>
+                                        <Image  
+                                        source={images[item]} 
+                                        style={{
+                                            height: height * 0.129,
+                                            width: height * 0.126,}}
+                                        resizeMode='contain' 
+                                        />
 
-                                        <Text>{Name[item]["name"]}</Text>
+                                        {/* <Text>{Name[item]["name"]}</Text> */}
 
                                     </View>
                                 </TouchableOpacity>
@@ -410,12 +417,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         height: height * 0.13,
         width: height * 0.13,
-        backgroundColor: 'white',
-        borderColor: 'grey',
-        borderWidth: 1,
+        // backgroundColor: 'white',
+        // borderColor: 'grey',
+        // borderWidth: 1,
         marginTop: height * 0.004,
         margin: height * 0.005,
-        opacity:0.65
+        // opacity:0.65
 
     }
 });

@@ -32,9 +32,17 @@ export default class StartScreen extends React.Component {
           radius={Dimensions.get('screen').width}
         >
           {/* <Image source={require('./logo3.png')} style={styles.image} /> */}
-          <Text style={{fontSize:Dimensions.get('window').height*0.2}}>Birds of Nepal</Text>
+          <View  style={{alignContent:'center',alignItems:'center',justifyContent:'center'}}>
+          <Text style={{
+            fontSize:Dimensions.get('window').height*0.05,
+            fontWeight:'bold',
+            color:'white',
+            textAlign:'center'
+            }}>
+              Birds of Nepal
+              </Text>
           <ActivityIndicator size='large' />
-
+          </View>
         </RadialGradient>
 
       </View>

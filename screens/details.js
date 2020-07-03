@@ -64,7 +64,11 @@ class Detailscreen extends Component {
                 <Text style={styles.nonbold}>Genus</Text>
                 <Text style={[styles.nonbold,{fontStyle:'italic'}]}>species</Text>
               </View>
-              <Image source={image[searchTerm]} style={{width:Dimensions.get('window').width*0.4}}/>
+              <Image 
+              source={image[searchTerm]} 
+              style={{width:Dimensions.get('window').width*0.4}}
+              resizeMode="contain"
+              />
             </View>
           
           <HTML
