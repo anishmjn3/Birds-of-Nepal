@@ -86,7 +86,7 @@ export default class AllBirds extends React.Component {
                     <Text style={[styles.familytextstyle, styles.centerAlign]}>{Name[BirdsAscen[i]]["name"]}</Text>
                     {/* <Text>{i}{BirdsAscen[i]}</Text> */}
                     </View>
-                    <Image source={image[BirdsAscen[i]]} style={{height:65,width:Dwidth*0.15}} resizeMode="contain"/>
+                    <Image source={image[BirdsAscen[i]]} style={{height:60, width:Dwidth*0.15}} resizeMode="contain"/>
                     </View>
                 </TouchableOpacity>
 
@@ -153,7 +153,8 @@ export default class AllBirds extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <View style={{ height: Dheight * 0.1 }} />
+
+                <View style={{ height: Dheight * 0.1 }} ></View>
                 <View style={{ flexDirection: 'row',height:Dheight*0.9 }}>
                     <View style={{ width: Dwidth * 0.07 }}>
 

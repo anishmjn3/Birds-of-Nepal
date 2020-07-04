@@ -221,6 +221,7 @@ export default class HomeScreen extends Component {
 
                             <Text style={styles.textcgs}>Explore Birds</Text>
                         </TouchableOpacity>
+
                     </View>
                 </View>
             );

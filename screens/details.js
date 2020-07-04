@@ -61,8 +61,8 @@ class Detailscreen extends Component {
                 <Text style={styles.nonbold}>Aves</Text>
                 <Text style={styles.nonbold}>{Name[searchTerm]["order"]}</Text>
                 <Text style={styles.nonbold}>{Name[searchTerm]["family"]}</Text>
-                <Text style={styles.nonbold}>Genus</Text>
-                <Text style={[styles.nonbold,{fontStyle:'italic'}]}>species</Text>
+                <Text style={styles.nonbold}>{Name[searchTerm]["genus"]}</Text>
+                <Text style={[styles.nonbold,{fontStyle:'italic'}]}>{Name[searchTerm]["species"]}</Text>
               </View>
               <Image 
               source={image[searchTerm]} 
