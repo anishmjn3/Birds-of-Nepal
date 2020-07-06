@@ -35,7 +35,7 @@ export default class AboutUsScreen extends React.Component{
             alignItems:'center'
           }}
         />
-        <View style={{height:Dheight*0.15,width:100}}></View>
+        <View style={{height:Dheight*0.12,width:100}}></View>
         <View style={{height:Dheight*0.1}}>
           <Text style={{fontSize:20}}>Developed By:</Text>
           <Text style={{fontSize:18}}>    Anish Maharjan (Anish Apps)</Text>
@@ -53,8 +53,14 @@ export default class AboutUsScreen extends React.Component{
             // resizeMode='contain'
           />
         </View>
-        <View style={{height:Dheight*0.05}}>
-          <Text style={{fontSize:18}}>Version : 1.0.0</Text>
+        <View style={{height:Dheight*0.09}}>
+        <Text style={{fontSize:18,textAlign:'center'}}>Birds of Nepal</Text>
+        <Text style={{fontSize:18,textAlign:'center'}}>
+        Recognize and Explore with information
+
+        </Text>
+
+          <Text style={{fontSize:18,textAlign:'center'}}>Version : 1.0.0</Text>
         </View>
         <View style={{padding:25,height:Dheight*0.4}}>
           <Text style={{textAlign:'justify'}}>A Bird identification app, based on ML which recognizes 887 Birds found in Nepal according to "Birds of Nepal : An Official Checklist-2018"</Text>

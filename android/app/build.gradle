@@ -132,7 +132,7 @@ android {
         noCompress'lite'
     }
     defaultConfig {
-        applicationId "com.birds_of_nepal"
+        applicationId "com.birdsofnepal"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

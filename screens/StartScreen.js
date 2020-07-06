@@ -52,7 +52,8 @@ export default class StartScreen extends React.Component {
                 textAlign: 'center'
               }}
               >
-                Recognize and Explore with information</Text>
+                Recognize and Explore with information
+                </Text>
               <ActivityIndicator size='large' />
             </View>
           {/* </RadialGradient> */}

@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'Birds_Of_Nepal' do
-  # Pods for Birds_Of_Nepal
+target 'BirdsofNepal' do
+  # Pods for BirdsofNepal
   pod 'React', :path => '../node_modules/react-native/'
   pod 'React-Core', :path => '../node_modules/react-native/React'
   pod 'React-DevSupport', :path => '../node_modules/react-native/React'
@@ -28,7 +28,7 @@ target 'Birds_Of_Nepal' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  target 'Birds_Of_NepalTests' do
+  target 'BirdsofNepalTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -36,10 +36,10 @@ target 'Birds_Of_Nepal' do
   use_native_modules!
 end
 
-target 'Birds_Of_Nepal-tvOS' do
-  # Pods for Birds_Of_Nepal-tvOS
+target 'BirdsofNepal-tvOS' do
+  # Pods for BirdsofNepal-tvOS
 
-  target 'Birds_Of_Nepal-tvOSTests' do
+  target 'BirdsofNepal-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
