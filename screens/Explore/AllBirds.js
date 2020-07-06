@@ -5,7 +5,8 @@ import BirdsAscen from '../data'
 import familyname from '../family';
 import family from '../familydetail';
 import Name from '../Database';
-import image from '../images/src/image'
+import image from '../images/src/image';
+import {styles} from './styles';
 
 const alphabets = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'R', 'S', 'T', 'U', 'V', 'W', 'Y']
 const alphabetswvalue = {
@@ -105,12 +106,6 @@ export default class AllBirds extends React.Component {
         for (let i = 0; i < 23; i++) {
             myloop.push(
                 <TouchableOpacity
-                    // style={[styles.familystyle, styles.familystyleborder, 
-                    //     // styles.centerAlign
-                    //     {justifyContent:'center',paddingLeft:15}
-                    // ]}
-                    // style={{flexDirection:'row'}}
-                    // onPress={() => this.props.navigation.navigate("OpenClass")}
                     onPress={() => {
 
                         this.scrollview_ref.scrollTo({
@@ -242,48 +237,3 @@ export default class AllBirds extends React.Component {
     }
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#FFDEAD'
-    },
-    centerAlign: {
-        justifyContent: 'center',
-        alignContent: 'center',
-        alignItems: 'center'
-    },
-    familystyle: {
-        width: Dimensions.get('window').width * 0.8,
-        height: 100,
-        backgroundColor: 'white',
-        padding: 10,
-        margin: 10,
-    },
-    familystyleborder: {
-        borderBottomColor: 'grey',
-        borderRadius: 15,
-        borderBottomWidth: 3,
-        borderRightColor: 'grey',
-        borderRightWidth: 3,
-        borderLeftWidth: 3,
-        borderLeftColor: 'white'
-    },
-    familytextstyle: {
-        fontSize: 20
-    },
-    nextprev: {
-        backgroundColor: '#fff',
-        width: Dimensions.get('window').width * 0.3,
-        height: Dimensions.get('window').height * 0.05,
-        borderBottomColor: 'grey',
-        borderRadius: 10,
-        borderBottomWidth: 2,
-        borderRightColor: 'grey',
-        borderRightWidth: 2,
-        borderLeftWidth: 2,
-        borderLeftColor: 'white'
-
-    }
-})

@@ -5,7 +5,8 @@ import BirdsAscen from '../data'
 import familyname from '../family';
 import family from '../familydetail';
 import Name from '../Database';
-import image from '../images/src/image'
+import image from '../images/src/image';
+import {styles} from './styles';
 const Dheight = Dimensions.get('window').height;
 const Dwidth = Dimensions.get('window').width;
 
@@ -94,37 +95,3 @@ export default class AllBirds extends React.Component {
         )
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#FFDEAD'
-    },
-    centerAlign: {
-        justifyContent: 'center',
-        alignContent: 'center',
-        alignItems: 'center'
-    },
-    familystyle: {
-        width: Dimensions.get('window').width * 0.8,
-        height: 100,
-        backgroundColor: 'white',
-        padding: 10,
-        margin: 10,
-    },
-    familystyleborder: {
-        borderBottomColor: 'grey',
-        borderRadius: 15,
-        borderBottomWidth: 3,
-        borderRightColor: 'grey',
-        borderRightWidth: 3,
-        borderLeftWidth: 3,
-        borderLeftColor: 'white'
-    },
-    familytextstyle: {
-        fontSize: 20,
-        textAlign: 'left'
-    }
-})
