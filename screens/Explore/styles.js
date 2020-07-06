@@ -47,6 +47,10 @@ const styles = StyleSheet.create({
         borderLeftWidth: 2,
         borderLeftColor: 'white'
 
+    },
+    heading:{
+        fontWeight:'bold',
+        fontSize:15
     }
 })
 

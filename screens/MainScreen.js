@@ -11,15 +11,17 @@ import {
     Button
 }
     from 'react-native';
+import { Header } from 'react-native-elements';
 import Tflite from 'tflite-react-native';
 import ImagePicker from 'react-native-image-picker';
 
-import Name from './Database'
-import FamilyDetail from './familydetail';
+import Name from './Data/Database'
+import FamilyDetail from './Data/familydetail';
 import images from './images/src/image'
 
 import cameraicon from './cameraicon.png';
 import galleryicon from './galleryicon.png';
+// import { openDrawer } from 'react-navigation-drawer/lib/typescript/src/routers/DrawerActions';
 
 let tflite = new Tflite();
 
@@ -36,16 +38,29 @@ console.disableYellowBox = true;
 
 
 export default class HomeScreen extends Component {
-    static navigationOptions = () => ({
-        title: 'Birds of Nepal',
-        headerStyle: {
-            backgroundColor: '#00008b',
-        },
-        headerTitleStyle: {
-            color: 'white'
-        },
+    // static navigationOptions = (navigation) => ({
+    //     title: 'Birds of Nepal',
+    //     headerStyle: {
+    //         backgroundColor: '#00008b',
+    //     },
+    //     headerTitleStyle: {
+    //         color: 'white'
+    //     },
+    //     headerLeft: () => (
+    //         <TouchableOpacity
+    //             // onPress={() => navigation.openDrawer()}
 
-    });
+    //         >
+    //             <Image
+    //                 source={require('./Menuicon.png')}
+    //                 style={{ height: 20, width: 50, alignContent: 'center' }}
+    //                 resizeMode='contain'
+    //             />
+
+    //         </TouchableOpacity>
+    //         // <Text>asfd</Text>
+    //     )
+    // });
 
     constructor(props) {
         super(props);
@@ -192,6 +207,7 @@ export default class HomeScreen extends Component {
         var resultScreen = () => {
             return (
                 <View >
+
                     <View style={[styles.galleryinbutton]}>
                         <TouchableOpacity
                             onPress={this.onSelectCamera.bind(this)}
@@ -296,12 +312,13 @@ export default class HomeScreen extends Component {
                                     }
                                 >
                                     <View key={key} style={[styles.recommendstyle]}>
-                                        <Image  
-                                        source={images[item]} 
-                                        style={{
-                                            height: height * 0.129,
-                                            width: height * 0.126,}}
-                                        resizeMode='contain' 
+                                        <Image
+                                            source={images[item]}
+                                            style={{
+                                                height: height * 0.129,
+                                                width: height * 0.126,
+                                            }}
+                                            resizeMode='contain'
                                         />
 
                                         {/* <Text>{Name[item]["name"]}</Text> */}
@@ -334,7 +351,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#FFDEAD'
+        backgroundColor: '#f7c06d'
     },
     centerAlign: {
         justifyContent: 'center',

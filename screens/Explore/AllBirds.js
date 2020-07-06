@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, ScrollView, Text, StyleSheet, TouchableOpacity, Dimensions,Image} from 'react-native'
 
-import BirdsAscen from '../data'
-import familyname from '../family';
-import family from '../familydetail';
-import Name from '../Database';
+import BirdsAscen from '../Data/data'
+import familyname from '../Data/family';
+import family from '../Data/familydetail';
+import Name from '../Data/Database';
 import image from '../images/src/image';
 import {styles} from './styles';
 

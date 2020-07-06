@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, ScrollView, Text, StyleSheet, Image, TouchableOpacity, Dimensions } from 'react-native'
 
-import BirdsAscen from '../data'
-import familyname from '../family';
-import family from '../familydetail';
+import BirdsAscen from '../Data/data'
+import familyname from '../Data/family';
+import family from '../Data/familydetail';
 import image from '../images/src/image';
 import {styles} from './styles';
 const Dheight = Dimensions.get('window').height;

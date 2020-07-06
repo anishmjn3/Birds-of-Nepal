@@ -13,7 +13,7 @@ import {
 // import BirdsDetails from './data';
 import HTML from 'react-native-render-html';
 // import Family from "./family";
-import Name from "./Database";
+import Name from "./Data/Database";
 import image from './images/src/image';
 
 
